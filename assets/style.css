@@ -12,11 +12,12 @@ background-image: linear-gradient(
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0) 60%
   );
+background-repeat: no-repeat;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 
-
+/*header settings*/
 header{
     padding:10px;
     border-radius: 0, 25;
@@ -47,18 +48,45 @@ header nav ul li {
 }
 
 .biocard {
-    display: relative;
     position: center;
-
+    background-color: var(--slate);
+    color:var(--off-white)
+    margin: 25%;
 }
-section img{
+.bio {
+    display:inline-flex;
+    color:var(--off-white)
+}
+
+aside img{
+    padding:5px;
+    border:5px;
     width: 100px;
     height: 100px;
 }
-
+aside section p{
+    padding-left: 5px;
+}
+/*media query monitor: bio in aside, three columns*/
 @media screen and (min-width: 992px) {
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+}
+/*media query tablet aside none, nav sticky, bio at top, columns two*/
+@media screen and (min-width: 768px) {
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+}
+/*media query phone: columns one*/
+@media screen and (min-width: 576px) {
     header {
-      width: 75%;
+      width: 100%;
     }
   
     .card-column {
@@ -66,6 +94,3 @@ section img{
       max-width: 33.333%;
     }
 }
-/*media query for large screen: min width 992px, nav none, three columns
-media query for tablet 768px, aside none, columns two
-phones 576px aside none, columns one */
