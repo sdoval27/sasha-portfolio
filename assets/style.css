@@ -1,16 +1,17 @@
 :root{
     /*color palette*/
     --dusty-blue:#88C1B1;
-    --alt-blue:#3B8484;
-    --off-white: #F3FFFD;
+    --sage-green: #6A947D;
+    --off-white: #F5FFC0;
     --slate:#181E1E;
+    --also-slate:#2E4053;
 }
 
 body {
-background-color:var(--dusty-blue);
+background-color:var(--sage-green);
 background-image: linear-gradient(
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 60%
+    rgba(255, 255, 255, .6) 0%,
+    rgba(255, 255, 255, 0) 90%
   );
 background-repeat: no-repeat;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -18,12 +19,11 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
 
 
 /*header settings*/
-header{
+header, footer{
     padding:10px;
-    border-radius: 0, 25;
     background-color: var(--slate);
-    color: white;
-
+    color: var(--off-white);
+    margin:0%;
 }
 
 header h1{
@@ -46,42 +46,79 @@ header nav ul li {
     display: inline-block;
     padding-left: 5%;
 }
+/*link settings*/
+a {
+    color: var(--off-white);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
 
 .biocard {
     position: center;
     background-color: var(--slate);
-    color:var(--off-white)
-    margin: 25%;
+    color:var(--off-white);
+    margin: left;
 }
 .bio {
-    display:inline-flex;
-    color:var(--off-white)
+    text-align: center;
+    margin: 3%;
+    color:var(--off-white);
 }
 
 aside img{
     padding:5px;
-    border:5px;
     width: 100px;
     height: 100px;
+    margin: 12px; 
+    border-radius: 15px;   
+
 }
-aside section p{
-    padding-left: 5px;
+
+.center {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
+
+/*main CSS*/
+main {
+    width: 70%;
+    display: block;
+    margin-left: 22%;
+}
+
+footer
+
 /*media query monitor: bio in aside, three columns*/
 @media screen and (min-width: 992px) {
-  
-    .card-column {
+  aside {
+    width: 20%;
+    margin:left;
+    text-align: left;
+    
+    aside img{
+    align: center;
+    }
+
+  }
+ /*   .card-column {
       flex: 0 0 33.333%;
       max-width: 33.333%;
-    }
+    }*/
 }
 /*media query tablet aside none, nav sticky, bio at top, columns two*/
 @media screen and (min-width: 768px) {
   
-    .card-column {
+    biocard{
+        border-radius: 15px;
+    }
+ /*   .card-column {
       flex: 0 0 33.333%;
       max-width: 33.333%;
-    }
+    }*/ 
 }
 /*media query phone: columns one*/
 @media screen and (min-width: 576px) {
