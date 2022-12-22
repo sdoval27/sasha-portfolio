@@ -82,6 +82,11 @@ main {
     top: 0px;
     
 }
+.bio-title {
+    color:var(--off-white);
+    text-align:center;
+    font-size: var(--header-size);
+}
 .bio {
     text-align: center;
     margin: 3%;
@@ -100,15 +105,21 @@ main {
 
 /*work section*/
 .work {
-    column-count: 2;
+    /*column-count: 3;*/
     
 }
 figure img {
-    width: 200px;
-    height: 150px;
+    max-width: 100%;
+    height: 200px;
+    border: 5px solid var(--slate);
+}
+figure img:hover {
+    width: 60%;
+    height: 60%;
+    border: 8px solid var(--slate);
 }
 .card {
-    background-color: var(--slate);
+    /*background-color: var(--slate);*/
     width: fit-content;
     height: fit-content;
     padding:8px;
@@ -116,9 +127,12 @@ figure img {
     top:0%;
 }
 .card-title{
+    background-color:var(--slate);
     color: var(--off-white);
-    width: fit-content;
     padding: 3px;
+    position:absolute;
+    top:6%;
+    left:4%;
 }
 
 /*sidebar*/
@@ -139,10 +153,9 @@ aside ul{
 
 /*media query monitor: bio in aside, three columns*/
 @media screen and (min-width:992px) {
-    main {
-    background-color: var(--off-white);
-    column-count: 3;
-    column-gap: none;
+    .work {
+        column-count: 3;
+        column-gap: normal;
     }
  /*   .card-column {
       flex: 0 0 33.333%;
@@ -151,9 +164,8 @@ aside ul{
 }
 /*media query tablet aside none, nav sticky, bio at top, columns two*/
 @media screen and (min-width: 768px) {
-
-    main{
-        column-count: 1;
+    .work {
+        column-count: 2;
     }
  /*   .card-column {
       flex: 0 0 33.333%;
@@ -162,8 +174,7 @@ aside ul{
 }
 /*media query phone: columns one*/
 @media screen and (min-width: 576px) {
-
-    main{
+    .work {
         column-count: 1;
     }
 }
