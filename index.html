@@ -10,69 +10,87 @@
   <body>
     <!-- Header -->
     <header>
-      <h1>"We are not our best intentions. We are what we do. --Amy Dickinson"</h1>
+      <h1 class="header-title"> Sasha Doval</h1>
       <nav> <!--make nav sticky on mobile, make it an aside on web-->
         <ul>
-            <li><a href="https://www.linkedin.com/in/sasha-doval-3950921b7/"> LinkedIn</a></li>
-            <li><a href="https://github.com/sdoval27">GitHub</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#work">Work</a></li>
             <li> <a href="#contact-me">Contact Me</a> </li>
+            <li> <a src="https://youtu.be/dQw4w9WgXcQ">Resume</a></li>
         </ul>
       </nav>
     </header>
 
-    <aside class="biocard">
-      <h2 class="bio">About Me</h2>
-      <img src="./assets/images/sasha-profile.jpg" alt="Sasha Doval" class="center"> </img>
-      <p class="bio">Sasha is an amateur content creator who is destined to eat all the spicy cheetos in the world. >:) the more i type the longer this think better get lololo wee ding ding yeah</p>
-    </aside>
-    
+    <div>
+      <img src="./assets/images/water-banner2.jpeg" class="buffer"> </img>
+    </div>
+
     <main>
-      
-        <!--This is where folders preview images of the sites I will make :) -->
-       <figure class="card">
-        <h2>Project 1</h2>
-        <card>
-        <img src="./assets/images/pexels-portfolio-1.jpeg" alt="image of teacup and string lights on table"> </img>
-        <p>Content preview goes here</p>
-        </card>
-       </figure>
+      <section class="biocard">
+      <img src="./assets/images/sasha-profile.jpg" alt="Sasha Doval" id="about-me" class="bio-img"> </img>
+      <h2 class="bio-title">Sasha Doval</h2>
+      <p class="bio">Sasha is an amateur content creator who is destined to eat all the spicy cheetos in the world. >:)
+      </section>
+
+      <section class="work"> 
+        <figure class="card">
+         
+         <card>
+          <h2 class="card-title">Project 1</h2>
+         <img src="./assets/images/pexels-portfolio-1.jpeg" alt="image of teacup and string lights on table">
+         </img>
+         </card>
+        </figure>
+
         <!--project 2-->
-       <figure class="card">
-        <h2>Project 2</h2>
-        <card>
-        <img src="./assets/images/pexels2.jpeg" alt="cluttered wooden table with old fashioned camera, picture frames, and antique books"> </img>
-        <p>Content preview goes here</p>
-        </card>
-       </figure>
+        <figure class="card">
+          <h2 class="card-title">Project 2</h2>
+          <card>
+          <img src="./assets/images/pexels2.jpeg" alt="cluttered wooden table with old fashioned camera, picture frames, and antique books"> </img>
+          </card>
+        </figure>
+
         <!--project 3-->
         <figure class="card">
-          <h2>Project 3</h2>
+          <h2 class="card-title">Project 3</h2>
           <card>
           <img src="./assets/images/pexels3.jpeg" alt="clocktower obscured by autumn leaves"> </img>
-          <p>Content preview goes here</p>
           </card>
-         </figure>
-
-         <figure class="card">
-          <h2>Project 3</h2>
+        </figure>
+        
+        <!--project 4-->
+        <figure class="card">
+          <h2 class="card-title">Project 4</h2>
           <card>
           <img src="./assets/images/pexels-4.jpeg" alt="four horses grazing in a grass pasture with a tree"> </img>
-          <p>Content preview goes here</p>
           </card>
-         </figure>
+        </figure>
 
-         <figure class="card">
-          <h2>Project 3</h2>
+        <!--project 5-->
+        <figure class="card">
+          <h2 class="card-title">Project 5</h2>
           <card>
           <img src="./assets/images/pexels-5.jpeg" alt="woven hammock between two trees at sunset"> </img>
-          <p>Content preview goes here</p>
           </card>
-         </figure>
+        </figure>
+
+      </section>
     </main>
 
-    <footer id="contact-me">
-      <h3> Contact Me:</h3>
-      <p>Phone:555-555-5555 &nbsp&nbsp&nbsp Email: vampiresucc@gmail.com</p>  
+    <aside>
+      <ul>
+        <li>About Me</li><br>
+        <li id="work"> My Work</li><br><br>
+        <li id="contact-me"> Contact Me </li><br>
+      </ul>
+    </aside>
+
+    <footer>
+      
+      <p>Phone:555-555-5555 &nbsp&nbsp&nbsp Email: sashardoval@gmail.com &nbsp&nbsp&nbsp
+      <a href="https://www.linkedin.com/in/sasha-doval-3950921b7/"> LinkedIn</a>&nbsp&nbsp&nbsp
+      <a href="https://github.com/sdoval27">GitHub</a>
+    </p>
     </footer>
 
   </body>

@@ -5,6 +5,7 @@
     --off-white: #F5FFC0;
     --slate:#181E1E;
     --also-slate:#2E4053;
+    --header-size: 20px;
 }
 
 body {
@@ -14,21 +15,22 @@ background-image: linear-gradient(
     rgba(255, 255, 255, 0) 90%
   );
 background-repeat: no-repeat;
-font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
 /*header settings*/
-header, footer{
+header, footer {
     padding:10px;
     background-color: var(--slate);
     color: var(--off-white);
-    margin:0%;
+    margin:0px;
 }
 
-header h1{
+.header-title{
    line-height: 0;
-   font-size: 25px;
+   font-size: 30px;
+   margin-top: 30px;
+   margin-left: 20px;
 }
 
 header nav {
@@ -37,14 +39,15 @@ header nav {
     text-align: right;
     margin-right: 10px;
 }
+
 header nav ul {
     list-style-type: none;
-
 }
 
 header nav ul li {
     display: inline-block;
-    padding-left: 5%;
+    padding-right: 5%;
+    font-size: var(--header-size);
 }
 /*link settings*/
 a {
@@ -56,11 +59,33 @@ a:hover{
     text-decoration: underline;
 }
 
+.buffer{
+    margin:0;
+    width: 100vw;
+    height: auto;
+}
+
+/*main CSS*/
+main {
+    margin-right:25%;
+    float:right;
+}
+
+/*about me section*/
 .biocard {
-    position: center;
     background-color: var(--slate);
     color:var(--off-white);
-    margin: left;
+    padding:5px;
+    width: 70%;
+    border-radius: 15px;
+    float:inline-start;
+    top: 0px;
+    
+}
+.bio-title {
+    color:var(--off-white);
+    text-align:center;
+    font-size: var(--header-size);
 }
 .bio {
     text-align: center;
@@ -68,42 +93,70 @@ a:hover{
     color:var(--off-white);
 }
 
-aside img{
+.bio-img{
     padding:5px;
     width: 100px;
-    height: 100px;
-    margin: 12px; 
-    border-radius: 15px;   
-
-}
-
-.center {
+    height: 100px; 
+    border-radius: 15px; 
     display:block;
     margin-left:auto;
-    margin-right:auto;
+    margin-right:auto;  
 }
 
-/*main CSS*/
-main {
-    width: 70%;
-    display: block;
-    margin-left: 22%;
+/*work section*/
+.work {
+    /*column-count: 3;*/
+    
+}
+figure img {
+    max-width: 100%;
+    height: 200px;
+    border: 5px solid var(--slate);
+}
+figure img:hover {
+    width: 60%;
+    height: 60%;
+    border: 8px solid var(--slate);
+}
+.card {
+    /*background-color: var(--slate);*/
+    width: fit-content;
+    height: fit-content;
+    padding:8px;
+    position: relative;
+    top:0%;
+}
+.card-title{
+    background-color:var(--slate);
+    color: var(--off-white);
+    padding: 3px;
+    position:absolute;
+    top:6%;
+    left:4%;
 }
 
-footer
+/*sidebar*/
+aside {
+    background-color: var(--slate);
+    padding: 20px;
+    height:100vh;
+    width: 200px;
+}
+
+aside ul{
+    color: var(--off-white);
+    text-align: center;
+    font-size: var(--header-size);
+    list-style-type: none;
+}
+
 
 /*media query monitor: bio in aside, three columns*/
-@media screen and (min-width: 992px) {
-  aside {
-    width: 20%;
-    margin:left;
-    text-align: left;
-    
-    aside img{
-    align: center;
+@media screen and (min-width:992px) {
+    .work {
+        column-count: 3;
+        column-gap: normal;
     }
-
-  }
  /*   .card-column {
       flex: 0 0 33.333%;
       max-width: 33.333%;
@@ -111,9 +164,8 @@ footer
 }
 /*media query tablet aside none, nav sticky, bio at top, columns two*/
 @media screen and (min-width: 768px) {
-  
-    biocard{
-        border-radius: 15px;
+    .work {
+        column-count: 2;
     }
  /*   .card-column {
       flex: 0 0 33.333%;
@@ -122,12 +174,7 @@ footer
 }
 /*media query phone: columns one*/
 @media screen and (min-width: 576px) {
-    header {
-      width: 100%;
-    }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
+    .work {
+        column-count: 1;
     }
 }
