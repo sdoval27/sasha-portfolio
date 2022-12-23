@@ -1,39 +1,21 @@
 # main-portfolio-site
 Creates a space for my personal coding projects.
-# week-1-challenge
-Edit a marketing site to meet accessibility standards:
+# week 2 challenge: main-portfolio-site
+Create a portfolio website to hold all future websites for future employers to view.
 https://sdoval27.github.io/week-1-challenge/
 
 ## Description
 
-- This digital marketing site has been edited to meet accessibility standards. When editing this site, five issues were addressed as stated below:
+- This portfolio site has been create to demonstrate knowledge of advanced CSS tools such as hover, media query, and flexible design for a better user experience.
 
-### The Title Element: ![Title Element](assets/images/title-element.png)
-The title element in the head of the HTML file was changed from "website" to "Horiseon Digital Marketing" to improve SEO.
+### Navigation Links:
+The links in the top right corner of the navigation (excluding the #resume) direct users to the corresponding section of the page. There are also external links in the 'contact me' section that lead to my github and linkedin profiles.
 
-### Accessibility:
-- Detailed alt descriptions were added to all images that appear on the website.
+### Images:
+- I have included a recent Bio image of myself, as well as placeholder images for future projects. If a user hovers over these placeholder images, the images grow bigger. The placeholder images also have a link that direct the user to an external page with only that image.
 
-### HTML Semantics:
-- Sections previously marked as "div" were renamed to define their appropriate function on the page. 
-
-- The navigation within the header was renamed "nav". All the links on the nav bar relocate the user to their respective sections within the page.
-![Navigation](assets/images/header-nav.png)
-
-
-- The sidebar was renamed "aside" and the contents within were renamed "article."
-![articles](assets/images/aside-articles.png)
-
-- The main section of the website was renamed "main", and the content enclosed were renamed to "section."
-![Main Content](assets/images/main-section.png)
-
-- Headers < h1 > through < h4 > were organcized in descending order on the HTML page.
-
-### CSS Changes:
-- CSS elements were rearranged to match the order they appear in the HTML file.
-- Styling content for the three sections under main were consolidated and renamed "notecard" due to the notecard-type styling of the sections.
-
-![CSS notecard](assets/images/CSS-notecard.png)
+### Media Queries:
+- when the viewport becomes smaller, the sidebar has been programmed to disappear, and the two columns of images become one column.
 
 ## Installation
 
@@ -41,9 +23,7 @@ N/A
  
 ## Usage
 When opening the page, the website should appear as so:
-![Horiseon Top](assets/images/Horiseon-page-1.png)
-clicking on the links in the navigation bar will direct the user to the lower half of the page.
-![Horiseon Bottom](assets/images/Horiseon-page-2.png)
+![portfolio screenshot](assets/images/portfolio%20website%20screenshot.png)
  
 ## License
  
