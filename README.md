@@ -2,7 +2,7 @@
 Creates a space for my personal coding projects.
 # week 2 challenge: main-portfolio-site
 Create a portfolio website to hold all future websites for future employers to view.
-https://sdoval27.github.io/week-1-challenge/
+https://sdoval27.github.io/main-portfolio-site/
 
 ## Description
 
