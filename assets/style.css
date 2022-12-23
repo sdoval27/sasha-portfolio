@@ -19,8 +19,8 @@ font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ox
 }
 
 /*header settings*/
-header, footer {
-    padding:10px;
+header{
+    padding: 10px;
     background-color: var(--slate);
     color: var(--off-white);
     margin:0px;
@@ -65,9 +65,11 @@ a:hover{
     height: auto;
 }
 
-/*main CSS*/
+/*contains bio and work*/
 main {
-    margin-right:25%;
+    position:relative;
+    margin-left:20%;
+    margin-right:20%;
     float:right;
 }
 
@@ -76,11 +78,9 @@ main {
     background-color: var(--slate);
     color:var(--off-white);
     padding:5px;
-    width: 70%;
+    width: 75%;
     border-radius: 15px;
-    float:inline-start;
     top: 0px;
-    
 }
 .bio-title {
     color:var(--off-white);
@@ -89,10 +89,10 @@ main {
 }
 .bio {
     text-align: center;
-    margin: 3%;
+    margin:3%;
     color:var(--off-white);
 }
-
+/*profile image*/
 .bio-img{
     padding:5px;
     width: 100px;
@@ -105,17 +105,20 @@ main {
 
 /*work section*/
 .work {
-    /*column-count: 3;*/
-    
+    position:relative;
+    left: 50px;
+    top: 0px;
+    column-count: 2;
+    column-gap: 3px;
 }
 figure img {
-    max-width: 100%;
-    height: 200px;
+    max-width: 150%;
+    max-height: 150%;
     border: 5px solid var(--slate);
 }
 figure img:hover {
-    width: 60%;
-    height: 60%;
+    width: 200%;
+    height: 200%;
     border: 8px solid var(--slate);
 }
 .card {
@@ -135,46 +138,67 @@ figure img:hover {
     left:4%;
 }
 
+/*contact me section*/
+.contact-card {
+    position: relative;
+    top:31px;
+    width: vw;
+    border-radius: 15px;
+    padding: 4px;
+    text-align: center;
+    background-color: var(--slate);
+    color: var(--off-white);
+}
 /*sidebar*/
 aside {
+    position: absolute;
     background-color: var(--slate);
+    color: var(--off-white);
     padding: 20px;
-    height:100vh;
+    height:142vh;
     width: 200px;
-}
-
-aside ul{
     color: var(--off-white);
     text-align: center;
     font-size: var(--header-size);
-    list-style-type: none;
 }
 
+.about{
+    position:relative; 
+}
+.my-work{
+    position:relative;
+    top: 180px;
+    
+}
+.contact{
+    position:relative;
+    top: 1160px;
+}
 
 /*media query monitor: bio in aside, three columns*/
-@media screen and (min-width:992px) {
-    .work {
-        column-count: 3;
-        column-gap: normal;
-    }
- /*   .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }*/
-}
-/*media query tablet aside none, nav sticky, bio at top, columns two*/
-@media screen and (min-width: 768px) {
+@media screen and (max-width:992px) {
     .work {
         column-count: 2;
+        column-gap: normal;
+        display: flex-wrap;
+ 
+        flex: 0 0 33.333%;
+        max-width: 100%;
     }
- /*   .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }*/ 
 }
-/*media query phone: columns one*/
-@media screen and (min-width: 576px) {
+/*media query tablet aside none, nav sticky, bio at top, columns two*/
+@media screen and (max-width: 768px) {
     .work {
         column-count: 1;
+    }
+}
+/*media query phone: columns one*/
+@media screen and (max-width: 576px) {
+    aside {
+        visibility: hidden;
+    }
+    .work {
+        column-count: 1;
+        min-width: 100%;
     }
 }
