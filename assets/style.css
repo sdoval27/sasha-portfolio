@@ -75,12 +75,13 @@ main {
 
 /*about me section*/
 .biocard {
+    position: relative;
+    left:25%;
     background-color: var(--slate);
     color:var(--off-white);
     padding:5px;
     width: 75%;
     border-radius: 15px;
-    top: 0px;
 }
 .bio-title {
     color:var(--off-white);
@@ -175,30 +176,17 @@ aside {
     top: 1160px;
 }
 
-/*media query monitor: bio in aside, three columns*/
-@media screen and (max-width:992px) {
-    .work {
-        column-count: 2;
-        column-gap: normal;
-        display: flex-wrap;
- 
-        flex: 0 0 33.333%;
-        max-width: 100%;
-    }
-}
-/*media query tablet aside none, nav sticky, bio at top, columns two*/
+/*media query tablet*/
 @media screen and (max-width: 768px) {
-    .work {
-        column-count: 1;
-    }
-}
-/*media query phone: columns one*/
-@media screen and (max-width: 576px) {
     aside {
         visibility: hidden;
     }
+    main{
+        margin-right:auto;
+        margin-left:auto;
+    }
     .work {
         column-count: 1;
-        min-width: 100%;
+        min-width: 250%;
     }
 }
