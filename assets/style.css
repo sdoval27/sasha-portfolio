@@ -115,7 +115,6 @@ main {
 .spotlight {
     position: absolute;
     top:5%;
-
 }
 .spotlight-image {
     width: 600px;
@@ -170,7 +169,7 @@ main {
 /*contact me section*/
 .contact-card {
     position: absolute;
-    top:170%;
+    top:190%;
     right: 10%;
     border-radius: 15px;
     padding: 4px;
