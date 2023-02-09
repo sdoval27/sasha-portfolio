@@ -75,7 +75,7 @@ main {
 /*about me section*/
 .biocard {
     position: relative;
-    left:25%;
+    left:5%;
     background-color: var(--slate);
     color:var(--off-white);
     padding:5px;
@@ -106,7 +106,7 @@ main {
 /*work section*/
 .work {
     position:absolute;
-    left: 300px;
+    left: 400px;
     top: 500px;
     column-count: 2;
     column-gap: 3px;
@@ -114,7 +114,7 @@ main {
 
 .spotlight {
     position: relative;
-    top:5%;
+    top:10%;
 }
 .spotlight-image {
     width: 600px;
